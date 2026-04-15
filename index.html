@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+  const lang = navigator.language || '';
+
+  if (lang.toLowerCase().startsWith('es')) {
+    window.location.replace('/es/index.html');
+  } 
+  if  (lang.toLowerCase().startsWith('pt')) {
+    window.location.replace('/pt/index.html');
+  } 
+  else {
+    window.location.replace('/en/index.html');
+  }
+</script>
+</head>
+<body>
+<p>Redirecting...</p>
+</body>
+</html>
