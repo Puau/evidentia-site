@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Evidentia Stat Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0b1120;
+  color: #e2e8f0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1px;
+}
+
+h2 { font-size: 34px; }
+
+h3 { color: #cbd5f5; }
+
+p {
+  color: #94a3b8;
+  line-height: 1.7;
+}
+
+.hero {
+  text-align: center;
+  padding: 140px 20px 100px;
+  position: relative;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 640px;
+  margin: 20px auto;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #4f8ef7, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn {
+  background: linear-gradient(90deg, #4f8ef7, #6366f1);
+  padding: 14px 26px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* LANG SWITCH */
+.lang-switch {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  display: flex;
+  background: #111827;
+  border: 1px solid #ffffff15;
+  border-radius: 999px;
+  padding: 4px;
+}
+
+.lang-switch a {
+  padding: 6px 12px;
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.lang-switch a.active {
+  background: linear-gradient(90deg, #4f8ef7, #6366f1);
+  color: white;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  background: #111827;
+  padding: 26px;
+  border-radius: 18px;
+  border: 1px solid #ffffff10;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border: 1px solid #4f8ef730;
+}
+
+/* TIMELINE */
+.timeline-section {
+  margin-top: 40px;
+}
+
+.timeline-header {
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.timeline-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.timeline-steps::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 5%;
+  width: 90%;
+  height: 2px;
+  background: #ffffff15;
+}
+
+.timeline-step-card {
+  position: relative;
+  background: #111827;
+  padding: 26px;
+  border-radius: 18px;
+  border: 1px solid #ffffff10;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(90deg, #4f8ef7, #7c3aed);
+  border-radius: 50%;
+  position: absolute;
+  top: -37px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-phase {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.timeline-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.timeline-step-card ul {
+  padding-left: 18px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* CONTACT */
+.form {
+  margin-top: 40px;
+  display: grid;
+  gap: 16px;
+  max-width: 500px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ffffff15;
+  background: #111827;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border: 1px solid #4f8ef7;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .timeline-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-steps::before {
+    display: none;
+  }
+
+  .timeline-dot {
+    display: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="lang-switch">
+  <a href="/es/" class="active">ES</a>
+  <a href="/en/">EN</a>
+  <a href="/pt/">PT</a>
+</div>
+
+<h1><span class="highlight">Evidentia</span> Stat</h1>
+
+<h3>Transformamos datos en <span class="highlight">evidencia científica</span></h3>
+
+<p>
+Acompañamos procesos de investigación y toma de decisiones con análisis estadístico riguroso,
+diseño metodológico y comunicación clara.
+</p>
+
+<a href="#contacto" class="btn">Agendar consulta</a>
+
+</section>
+
+<section class="container">
+
+<!-- SERVICIOS -->
+<section id="servicios">
+
+<h2>Servicios</h2>
+
+<div class="grid grid-3">
+
+<div class="card">
+<h3>Papers y tesis</h3>
+<p>Análisis estadístico completo listo para publicación científica.</p>
+</div>
+
+<div class="card">
+<h3>Inferencia causal</h3>
+<p>Diseño de estudios y medición de impacto basada en evidencia.</p>
+</div>
+
+<div class="card">
+<h3>Consultoría avanzada</h3>
+<p>Soporte metodológico para proyectos complejos.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-section">
+
+<div class="timeline-header">
+<h2>Evidentia Scientific Pipeline</h2>
+
+<p>
+Un proceso en tres fases: cada proyecto sigue una metodología estructurada que garantiza coherencia
+entre el diseño del estudio, el análisis y la comunicación de resultados.
+</p>
+</div>
+
+<div class="timeline-steps">
+
+<div class="timeline-step-card">
+<div class="timeline-dot"></div>
+<div class="timeline-phase">◎ Inicio</div>
+<div class="timeline-title">Definición y Diseño</div>
+<ul>
+<li>Diseño experimental y plan de análisis</li>
+<li>Formulación de hipótesis estadísticas</li>
+<li>Estrategias de recolección de datos</li>
+<li>Protocolos de calidad de datos</li>
+</ul>
+</div>
+
+<div class="timeline-step-card">
+<div class="timeline-dot"></div>
+<div class="timeline-phase">⬡ Durante</div>
+<div class="timeline-title">Análisis y Validación</div>
+<ul>
+<li>Ejecución del análisis estadístico</li>
+<li>Validación de resultados</li>
+<li>Análisis de sensibilidad</li>
+<li>Iteraciones con el equipo investigador</li>
+</ul>
+</div>
+
+<div class="timeline-step-card">
+<div class="timeline-dot"></div>
+<div class="timeline-phase">✓ Fin</div>
+<div class="timeline-title">Interpretación y Comunicación</div>
+<ul>
+<li>Interpretación clínica y estadística</li>
+<li>Redacción metodológica</li>
+<li>Soporte para peer review</li>
+<li>Código reproducible</li>
+<li>Comunicación de resultados</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+<div class="container">
+
+<h2>
+¿Listo para transformar tus datos en <span class="highlight">evidencia?</span>
+</h2>
+
+<form class="form">
+<input type="text" placeholder="Nombre completo" required>
+<input type="email" placeholder="Email profesional" required>
+<textarea placeholder="Contanos brevemente tu proyecto"></textarea>
+<button class="btn">Agendar consulta</button>
+</form>
+
+</div>
+</section>
+
+</body>
+</html>
